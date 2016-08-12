@@ -33,3 +33,12 @@
   
         @RunWith(SpringJUnit4ClassRunner.class) 
         @ContextConfiguration(locations = {"classpath:spring-mybatis.xml"})
+        
+        
+## 2.SpringMVC与MyBatis的整合
+遇到问题
+- 部署时无法启动,报错内容为无法找到数据库驱动。
+
+解决方法
+
+- web.xml中多添加了Spring-Security的配置导致无法启动
