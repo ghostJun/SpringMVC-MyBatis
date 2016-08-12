@@ -31,5 +31,5 @@
       
   并在测试类中注入
   
-    @RunWith(SpringJUnit4ClassRunner.class) 
-    @ContextConfiguration(locations = {"classpath:spring-mybatis.xml"})
+        @RunWith(SpringJUnit4ClassRunner.class) 
+        @ContextConfiguration(locations = {"classpath:spring-mybatis.xml"})
