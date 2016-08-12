@@ -1,5 +1,5 @@
 package com.zealot.mapper;
-import com.zealot.dao.User;
+import com.zealot.entity.User;
 import org.springframework.stereotype.Component;
 
 @Component

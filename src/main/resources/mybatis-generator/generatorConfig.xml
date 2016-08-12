@@ -16,7 +16,7 @@
                         connectionURL="jdbc:mysql://localhost:3306/my_batis_demo" userId="root"
                         password=""/>
 
-        <javaModelGenerator targetPackage="com.zealot.dao"
+        <javaModelGenerator targetPackage="com.zealot.entity"
                             targetProject="/Users/GhostJun/Developer/my-git/ssm/src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>

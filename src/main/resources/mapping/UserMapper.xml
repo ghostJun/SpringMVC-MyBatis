@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.zealot.mapper.UserMapper" >
-    <resultMap id="BaseResultMap" type="com.zealot.dao.User" >
+    <resultMap id="BaseResultMap" type="com.zealot.entity.User" >
         <id column="id" property="id" jdbcType="INTEGER" />
         <result column="name" property="name" jdbcType="VARCHAR" />
         <result column="password" property="password" jdbcType="VARCHAR" />
@@ -21,13 +21,13 @@
         delete from user
         where id = #{id,jdbcType=INTEGER}
     </delete>
-    <insert id="insert" parameterType="com.zealot.dao.User" >
+    <insert id="insert" parameterType="com.zealot.entity.User" >
         insert into user (id, name, password,
         phone, favicon)
         values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
         #{phone,jdbcType=VARCHAR}, #{favicon,jdbcType=VARCHAR})
     </insert>
-    <insert id="insertSelective" parameterType="com.zealot.dao.User" >
+    <insert id="insertSelective" parameterType="com.zealot.entity.User" >
         insert into user
         <trim prefix="(" suffix=")" suffixOverrides="," >
             <if test="id != null" >
@@ -64,7 +64,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.zealot.dao.User" >
+    <update id="updateByPrimaryKeySelective" parameterType="com.zealot.entity.User" >
         update user
         <set >
             <if test="name != null" >
@@ -82,7 +82,7 @@
         </set>
         where id = #{id,jdbcType=INTEGER}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.zealot.dao.User" >
+    <update id="updateByPrimaryKey" parameterType="com.zealot.entity.User" >
         update user
         set name = #{name,jdbcType=VARCHAR},
         password = #{password,jdbcType=VARCHAR},

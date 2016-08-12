@@ -1,4 +1,4 @@
-package com.zealot.dao;
+package com.zealot.entity;
 
 public class User {
     private Integer id;
