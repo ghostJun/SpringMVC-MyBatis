@@ -10,10 +10,12 @@
 
 解决方法
 - spring-mybatis.xml中加入
+      `
       xmlns="http://www.springframework.org/schema/beans"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.springframework.org/schema/beas
       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd"
+      `
 - jdbc.properties中将url命名改为jdbc.url
 - 在pom.xml中加入依赖
       <dependency>
