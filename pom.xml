@@ -197,9 +197,11 @@
         <profile>
             <id>local</id>
             <properties>
-                <jdbcUrl>jdbc:mysql://localhost:3306/my_batis_demo</jdbcUrl>
-                <jdbcUsername>root</jdbcUsername>
-                <jdbcPassword></jdbcPassword>
+                <jdbc.driverClassName>com.alibaba.druid.pool.DruidDataSource</jdbc.driverClassName>
+                <jdbc.url>jdbc:mysql://localhost:3306/my_batis_demo</jdbc.url>
+                <jdbc.username>root</jdbc.username>
+                <jdbc.password></jdbc.password>
+                <jdbc.hibernate.showsql>false</jdbc.hibernate.showsql>
             </properties>
         </profile>
     </profiles>

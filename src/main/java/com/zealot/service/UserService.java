@@ -1,4 +1,6 @@
 package com.zealot.service;
+
+import com.zealot.entity.User;
 import com.zealot.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,5 +16,9 @@ public class UserService {
 
     public String getUserNameById(Integer userId) {
         return userMapper.selectByPrimaryKey(userId).getName();
+    }
+
+    public User getUserById(Integer userId) {
+        return userMapper.selectByPrimaryKey(userId);
     }
 }
