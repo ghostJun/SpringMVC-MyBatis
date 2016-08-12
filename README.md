@@ -9,12 +9,13 @@
 - 测试类爆空指针异常
 
 解决方法
+
 - spring-mybatis.xml中加入 
    
-      xmlns="http://www.springframework.org/schema/beans"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.springframework.org/schema/beas
-      http://www.springframework.org/schema/beans/spring-beans-2.5.xsd"
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beas
+        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd"
       
  
 - jdbc.properties中将url命名改为jdbc.url
@@ -30,5 +31,5 @@
       
   并在测试类中注入
   
-      @RunWith(SpringJUnit4ClassRunner.class) 
-      @ContextConfiguration(locations = {"classpath:spring-mybatis.xml"})
+    @RunWith(SpringJUnit4ClassRunner.class) 
+    @ContextConfiguration(locations = {"classpath:spring-mybatis.xml"})
