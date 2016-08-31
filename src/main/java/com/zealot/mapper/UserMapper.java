@@ -1,18 +1,19 @@
 package com.zealot.mapper;
+
 import com.zealot.entity.User;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public interface UserMapper {
-    int deleteByPrimaryKey(Integer id);
 
-    int insert(User record);
-
-    int insertSelective(User record);
+    List<User> findAll();
 
     User selectByPrimaryKey(Integer id);
 
-    int updateByPrimaryKeySelective(User record);
+    User findByNameAndPhone(String name, String phone);
 
-    int updateByPrimaryKey(User record);
+    void add(String name, String password, String phone, String favicon);
+
 }
