@@ -195,7 +195,7 @@
     </build>
     <profiles>
         <profile>
-            <id>local</id>
+            <id>localhost</id>
             <properties>
                 <jdbc.driverClassName>com.alibaba.druid.pool.DruidDataSource</jdbc.driverClassName>
                 <jdbc.url>jdbc:mysql://localhost:3306/my_batis_demo</jdbc.url>
